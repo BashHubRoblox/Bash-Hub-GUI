@@ -1,5 +1,6 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/BashHubRoblox/Bash-Hub-GUI/main/Base"))()
 local Window = Library.CreateLib("Bash Hub", "DarkTheme")
+
 local Main = Window:NewTab("Main")
 
 -----------------------------------------------------------------------
@@ -23,8 +24,15 @@ end)
 
 --Arsenal
 
-if game.GameId == 286090429 or game.Name = "Arsenal" then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/BashHubRoblox/Bash-Hub-GUI/Bash-Hub/Games/Arsenal"))()
-end)
+if game.GameId == 111958650 then
+    local Arsenal = Window:NewTab("Arsenal")
+    local CombatSection = Arsenal:NewSection("Combat")
+
+    CombatSection:NewButton("Aimbot/ESP", "A Simple Aimbot and ESP Script", function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/BashHubRoblox/Bash-Hub-GUI/Bash-Hub/Scripts/Arsenal%20Aimlock%20And%20Esp"))()
+   end)
+end
+
+print(game.GameId)
 
 -----------------------------------------------------------------------
