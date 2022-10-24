@@ -1,1 +1,27 @@
---Empty
+local MainLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/BashHubRoblox/Bash-Hub-GUI/main/Base"))()
+local Window = MainLib.CreateLib("Bash Hub", "DarkTheme")
+local Main = Window:NewTab("Main")
+
+-----------------------------------------------------------------------
+--[[Normal Stuff]]
+
+local PlayerSection = Main:NewSection("Player")
+
+
+PlayerSection:NewSlider("WalkSpeed", "Controls player WalkSpeed.", 500, 16, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+PlayerSection:NewSlider("JumpPower", "Controls player JumpPower.", 500, 50, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+-----------------------------------------------------------------------
+--[[Games]]
+
+--Arsenal
+if game.GameId == 286090429 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/BashHubRoblox/Bash-Hub-GUI/Bash-Hub/Games/Arsenal"))()
+end)
+
+-----------------------------------------------------------------------
