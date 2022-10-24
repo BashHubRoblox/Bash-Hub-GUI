@@ -19,7 +19,11 @@ game.StarterGui:SetCore("SendNotification", {
 local Main = Window:NewTab("Main")
 
 if game.GameId == 111958650 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/BashHubRoblox/Bash-Hub-GUI/Bash-Hub/Games/Arsenal"))()
+   local ArsenalSection = Main:NewSection("Arsenal")
+
+   ArsenalSection:NewButton("Aimbot/ESP", "A Simple Aimbot and ESP Script", function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/BashHubRoblox/Bash-Hub-GUI/Bash-Hub/Scripts/Arsenal%20Aimlock%20And%20Esp"))()
+   end)
 end
 
 -----------------------------------------------------------------------
@@ -50,7 +54,7 @@ end)
 
 --[[Misc Stuff]]
 
-local Misc = Main:NewSection("Miscellaneous")
+local Misc = Window:NewTab("Miscellaneous")
 
 -----------------------------------------------------------------------
 
