@@ -413,17 +413,6 @@ CloseButton.TextSize = 14
 --BodyThrust.Location = Vector3.new(0, 0, 0)
 
 --[[functions:]]--
-local function DisplayText(title, text, duration)
-	duration = duration or 1
-	game.StarterGui:SetCore("SendNotification", 
-		{
-			Title = title;
-			Text = text;
-			Icon = "";
-			Duration = duration;
-		}
-	)
-end
 
 local function DisplaySuggestion()
     for i,v in pairs(Suggestions) do
@@ -750,8 +739,4 @@ mouse.KeyDown:Connect(function(key)
     end
 end)
 
-
-DisplaySuggestion()
-TitleBar:TweenPosition(UDim2.new(0.25, 0, 0.7, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Back, 0.75)
-DisplayText("Loaded Fling GUI "..version, "Made by topit", 3)
 return nil
