@@ -1,5 +1,4 @@
-local Arsenal = Window:NewTab("Arsenal")
-local CombatSection = Arsenal:NewSection("Combat")
+local CombatSection = Main:NewSection("Arsenal")
 
 CombatSection:NewButton("Aimbot/ESP", "A Simple Aimbot and ESP Script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/BashHubRoblox/Bash-Hub-GUI/Bash-Hub/Scripts/Arsenal%20Aimlock%20And%20Esp"))()
