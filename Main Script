@@ -1,7 +1,9 @@
+-----------------------------------------------------------------------
+
+--[[Variables]]
+
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/BashHubRoblox/Bash-Hub-GUI/main/Base"))()
 local Window = Library.CreateLib("Bash Hub", "DarkTheme")
-
-local Main = Window:NewTab("Main")
 
 game.StarterGui:SetCore("SendNotification", {
     Title = "Bash Hub";
@@ -12,9 +14,20 @@ game.StarterGui:SetCore("SendNotification", {
 
 -----------------------------------------------------------------------
 
+--[[Main]]
+
+local Main = Window:NewTab("Main")
+
+if game.GameId == 111958650 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/BashHubRoblox/Bash-Hub-GUI/Bash-Hub/Games/Arsenal"))()
+end
+
+-----------------------------------------------------------------------
+
 --[[Player Stuff]]
 
-local PlayerSection = Main:NewSection("Local Player")
+local Player = Window:NewTab("Local Player")
+local PlayerSection = Player:NewSection("Character")
 
 
 PlayerSection:NewSlider("WalkSpeed", "Controls player WalkSpeed.", 500, 16, function(s)
@@ -38,16 +51,6 @@ end)
 --[[Misc Stuff]]
 
 local Misc = Main:NewSection("Miscellaneous")
-
------------------------------------------------------------------------
-
---[[Games]]
-
---Arsenal
-
-if game.GameId == 111958650 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/BashHubRoblox/Bash-Hub-GUI/Bash-Hub/Games/Arsenal"))()
-end
 
 -----------------------------------------------------------------------
 
