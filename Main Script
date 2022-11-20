@@ -8,7 +8,7 @@ local Window = Library.CreateLib("Bash Hub", "Midnight")
 game.StarterGui:SetCore("SendNotification", {
     Title = "Bash Hub";
     Text = "Thank you for using Bash Hub.";
-    Icon = "rbxassetid://4414605822";
+    Icon = "rbxassetid://11619751229";
     Duration = 3;
 })
 
