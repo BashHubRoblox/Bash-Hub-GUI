@@ -5,10 +5,14 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/BashHubRoblox/Bash-Hub-GUI/main/Base"))()
 local Window = Library.CreateLib("Bash Hub", "Midnight")
 
+local NotiSound = Instance.new("Sound"), game.Workspace)
+NotiSound.SoundId = "rbxassetid://4590662766"
+
 game.StarterGui:SetCore("SendNotification", {
-    Title = "Bash Hub";
-    Text = "Thank you for using Bash Hub.";
+    Title = "Bash Hub Loaded";
+    Text = "Thank you for using Bash Hub!";
     Icon = "rbxassetid://11619751229";
+    NotiSound:Play()
     Duration = 3;
 })
 
