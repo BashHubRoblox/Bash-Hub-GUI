@@ -3,7 +3,7 @@
 --[[Variables]]
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/BashHubRoblox/Bash-Hub-GUI/main/Base"))()
-local Window = Library.CreateLib("Bash Hub", "DarkTheme")
+local Window = Library.CreateLib("Bash Hub", "Midnight")
 
 game.StarterGui:SetCore("SendNotification", {
     Title = "Bash Hub";
